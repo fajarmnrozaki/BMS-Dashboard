@@ -27,9 +27,9 @@
             <li onclick="openTab(event, 'battery-status')">
                 <a href="#">
                     <i class="fa-solid fa-battery-empty  fa-2xl"></i>
-                    <span class="links_name">Battery Status</span>
+                    <span class="links_name">Energy Status</span>
                 </a>
-                <span class="tooltip">Battery Status</span>
+                <span class="tooltip">Energy Status</span>
             </li>
             <li onclick="openTab(event, 'daily-report')">
                 <a href="#">

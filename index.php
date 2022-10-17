@@ -78,7 +78,7 @@
         </div>
 
         <?php
-        include('./pages/battery-status.php');
+        include('./pages/energy-status.php');
         include('./pages/daily-report.php');
         include('./pages/events.php');
         include('./pages/monthly-report.php');
