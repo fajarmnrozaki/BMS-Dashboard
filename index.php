@@ -55,7 +55,7 @@
                 <!-- <div class="Batt-2" id="responsecontainer2"></div> -->
                 <script>
                     var refreshId = setInterval(function() {
-                        $('#responsecontainer1').load('./data/ultrasonic.php');
+                        $('#responsecontainer1').load('./data/energy.php');
                         // $('#responsecontainer2').load('./data/batt1.php');
                     }, 1000);
                 </script>

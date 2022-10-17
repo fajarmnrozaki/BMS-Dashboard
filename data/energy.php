@@ -12,8 +12,8 @@ if (!$connect) {
 ?>
 
 <?php
-$x_date  = mysqli_query($connect, 'SELECT time FROM ( SELECT * FROM cpu_temperature ORDER BY id DESC LIMIT 20) Var1 ORDER BY ID ASC');
-$y_temperature   = mysqli_query($connect, 'SELECT temperature FROM ( SELECT * FROM cpu_temperature ORDER BY id DESC LIMIT 20) Var1 ORDER BY ID ASC');
+$x_date  = mysqli_query($connect, 'SELECT time FROM ( SELECT * FROM tuya_smart_plug_1 ORDER BY id DESC LIMIT 20) Var1 ORDER BY ID ASC');
+$y_temperature   = mysqli_query($connect, 'SELECT voltage FROM ( SELECT * FROM tuya_smart_plug_1 ORDER BY id DESC LIMIT 20) Var1 ORDER BY ID ASC');
 ?>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -76,7 +76,7 @@ $y_temperature   = mysqli_query($connect, 'SELECT temperature FROM ( SELECT * FR
             <tbody>
                 <?php
                 $index = 1;
-                $sqlAdmin = mysqli_query($connect, "SELECT * FROM cpu_temperature ORDER BY ID DESC LIMIT 0,20");
+                $sqlAdmin = mysqli_query($connect, "SELECT * FROM tuya_smart_plug_1 ORDER BY ID DESC LIMIT 0,20");
                 while ($data = mysqli_fetch_array($sqlAdmin)) {
 
                     echo "<tr >
