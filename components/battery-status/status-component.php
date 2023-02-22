@@ -10,7 +10,7 @@ $status_6 = mysqli_query($connect, 'SELECT id,current,voltage FROM tuya_smart_pl
 $status_7 = mysqli_query($connect, 'SELECT id,current,voltage FROM tuya_smart_plug_7 ORDER BY id DESC LIMIT 2');
 $status_8 = mysqli_query($connect, 'SELECT id,current,voltage FROM tuya_smart_plug_8 ORDER BY id DESC LIMIT 2');
 
-function statusChanger($id, $voltage, $current, $statusId,)
+function statusChanger($id, $voltage, $current, $statusId)
 {
     if ($id % 2 != 0) {
         if ($voltage > 0) {
