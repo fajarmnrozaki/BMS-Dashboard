@@ -16,17 +16,17 @@ $x_tanggal_1  = mysqli_query($konek, 'SELECT time_created FROM ( SELECT * FROM b
 $random_number_1   = mysqli_query($konek, 'SELECT random_number FROM ( SELECT * FROM batt1 ORDER BY id DESC LIMIT 20) Var1 ORDER BY ID ASC');
 ?>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
 <div class="panel panel-primary">
     <div class="panel-body">
         <canvas id="myChart2"></canvas>
         <script>
-            const labels = [<?php while ($b = mysqli_fetch_array($x_tanggal_1)) {
+            labels = [<?php while ($b = mysqli_fetch_array($x_tanggal_1)) {
                                 echo '"' . $b['time_created'] . '",';
                             }
                             ?>]
 
-            const data = {
+            data = {
                 labels: labels,
                 datasets: [{
                     label: 'Distance',
@@ -38,7 +38,7 @@ $random_number_1   = mysqli_query($konek, 'SELECT random_number FROM ( SELECT * 
                 }]
             };
 
-            const config = {
+            config = {
                 type: 'line',
                 data: data,
                 options: {
@@ -46,7 +46,7 @@ $random_number_1   = mysqli_query($konek, 'SELECT random_number FROM ( SELECT * 
                 }
             };
 
-            const myChart = new Chart(
+            myChart = new Chart(
                 document.getElementById('myChart2'),
                 config
             );
